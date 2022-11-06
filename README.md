@@ -1,5 +1,11 @@
 # FitnessTracker
 
+A project from the course 
+
+## Angular (Full App) with Angular Material, Angularfire & NgRx
+by Maximilian Schwarzmüller 
+AWS certified, Professional Web Developer and Instructor
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
 
 ## Development server
