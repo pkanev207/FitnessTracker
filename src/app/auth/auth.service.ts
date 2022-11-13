@@ -31,6 +31,7 @@ export class AuthService {
   }
 
   logout() {
+    // this.user = null;
     this.user = undefined;
 
     this.authChange.next(false);
@@ -42,7 +43,8 @@ export class AuthService {
   }
 
   isAuth() {
-    return this.user != null;
+    // return this.user != null;
+    return this.user != undefined;
   }
 
   private authSuccessfully() {
