@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
 import { StopTrainingComponent } from './stop-training.component';
@@ -10,14 +10,13 @@ import { TrainingService } from '../training.service';
   styleUrls: ['./current-training.component.css'],
 })
 export class CurrentTrainingComponent implements OnInit {
-  // @Output() trainingExit = new EventEmitter();
   progress = 0;
   timer: any;
 
   constructor(
     private dialog: MatDialog,
     private trainingService: TrainingService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.startOrResumeTimer();
@@ -44,9 +43,8 @@ export class CurrentTrainingComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log(result);
+      // console.log(result);
       if (result) {
-        // this.trainingExit.emit();
         this.trainingService.cancelExercise(this.progress);
       } else {
         this.startOrResumeTimer();
